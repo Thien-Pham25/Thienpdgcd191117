@@ -15,7 +15,7 @@ if ($account === false) {
   $username = $_POST['username'];
   $password = $_POST['password'];
 
-  $query = "SELECT * FROM boss WHERE username = '$username' AND \"password\" = '$password'";
+  $query = "SELECT * FROM Boss WHERE username = '$username' AND \"password\" = '$password'";
   $result = pg_query($account, $query);
   $count = pg_num_rows($result);
   if ($count == 1) {
