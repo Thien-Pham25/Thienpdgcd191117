@@ -11,7 +11,7 @@ if ($account === false) {
   die("ERROR: Could not connect to the database server!");
 } else 
 {
-  echo ("Connect successfully! ");
+    //echo ("Connect successfully! ");
 
     $username = $_POST['username'];
     $password = $_POST['password'];
