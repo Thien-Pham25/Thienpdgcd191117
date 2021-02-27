@@ -12,8 +12,8 @@ if ($connect === false)
   die("ERROR: Could not connect to the database server!");
 } 
 else {
-  echo ("Connect successfully!");
-  $product_name = $_POST['product-name'];
+  //echo ("Connect successfully!");
+$product_name = $_POST['product-name'];
 $product_price = $_POST['product-price'];
 $atn_store = $_POST['atn-store'];
 $product_amount = $_POST['product-amount'];
