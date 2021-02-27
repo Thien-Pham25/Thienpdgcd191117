@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATN Shop / Add Product</title>
+
+    <link rel ="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body id="product-page">
+    <div class="form-title">
+        <h1> ATN SHOP - ADD PRODUCT </h1>
+    </div>
+    <form action="productsubmit.php" method="post">
+        <div class="form">
+            <div class="form-group">
+                <label for="product-name">Product name</label>
+                <input class="form-control" type="text" name="product-name" id="product-name" placeholder="Enter product's name" required>
+            </div>
+            <div class="form-group">
+                <label for="product-price">Price</label>
+                <input class="form-control" type="number" name="product-price" id="product-price" placeholder="Enter product's price" required>
+            </div>
+            <div class="form-group">
+                <label for="product-price">Store</label>
+                <input class="form-control" type="number" name="product-price" id="product-price" placeholder="Enter product's price" required>
+            </div>
+            <div class="form-group">
+                <label for="product-amount">Amount</label>
+                <input class="form-control before-add-btn" type="number" name="product-amount" id="product-amount" placeholder="Enter amount" required>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-submit" type="submit">SUBMIT</button>
+                <button class="btn btn-reset" type="reset">RESET</button>
+                <input class="bth btn-modify" type="button" onclick="location.href='/productmodify.php';" value="MODIFY" />
+            </div>
+        </div>
+        <a href="/logout.php">
+            <h3 id="sign-out"> LOG OUT </h3>
+        </a>
+    </form>
+</body>
+
+</html>
