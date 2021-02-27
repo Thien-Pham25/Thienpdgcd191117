@@ -36,7 +36,7 @@ $resultCheck = pg_num_rows($result);
       <table id="view-data" class="table" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>Product</th>
             <th>Price</th>
             <th>Store</th>
@@ -50,11 +50,11 @@ $resultCheck = pg_num_rows($result);
             while ($row = pg_fetch_assoc($result)) {
           ?>
               <tr>
-                <td><?php echo $row['product_id']; ?></td>
-                <td><?php echo $row['product_name']; ?></td>
-                <td><?php echo $row['product_price,']; ?></td>
-                <td><?php echo $row['atn_store']; ?></td>
-                <td><?php echo $row['product_amount']; ?></td>
+                <td><?php echo $row['product-id']; ?></td>
+                <td><?php echo $row['product-name']; ?></td>
+                <td><?php echo $row['product-price,']; ?></td>
+                <td><?php echo $row['atn-store']; ?></td>
+                <td><?php echo $row['product-amount']; ?></td>
               </tr>
           <?php
             }

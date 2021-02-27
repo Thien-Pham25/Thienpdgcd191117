@@ -9,22 +9,28 @@ sslmode=require");
 
 if ($account === false) {
   die("ERROR: Could not connect to the database server!");
-} else {
-  //echo ("Connect successfully! ");
+} else 
+{
+  echo ("Connect successfully! ");
 
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-  $query = "SELECT * FROM Boss WHERE username = '$username' AND \"password\" = '$password'";
-  $result = pg_query($account, $query);
-  $count = pg_num_rows($result);
-  if ($count == 1) {
-    session_start();
-    $_SESSION["username"] = $username;
-    header('Location: ./bossviewdata.php');
-  } else {
-    echo ("Wrong username or password. Please try again!") . pg_errormessage($query);
-    header('refresh: 2; url= ./bosslogin.php');
-  }
+    $query = "SELECT * FROM Boss WHERE username = '$username' AND \"password\" = '$password'";
+    $result = pg_query($account, $query);
+    $count = pg_num_rows($result);
+    if ($count == 1) 
+    {
+      session_start();
+      $_SESSION["username"] = $username;
+      header('Location: /bossviewdata.php');
+    } 
+  else 
+    {
+      echo ("Wrong username or password. Please try again!") . pg_errormessage($query);
+      header('refresh: 2; url= /bosslogin.php');
+    }
 }
 pg_close($account);
+
+
