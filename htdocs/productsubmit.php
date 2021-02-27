@@ -10,9 +10,7 @@ sslmode=require");
 if ($connect === false) 
 {
   die("ERROR: Could not connect to the database server!");
-} 
-else {
-  //echo ("Connect successfully!");
+} else {
 $product_name = $_POST['product-name'];
 $product_price = $_POST['product-price'];
 $atn_store = $_POST['atn-store'];
