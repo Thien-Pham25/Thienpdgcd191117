@@ -22,16 +22,15 @@ $resultCheck = pg_num_rows($result);
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-  <link rel ="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body id="bd-view-page">
   <div class="form-title">
     <h1 style="font-weight: 700;">ATN BOSS - VIEW SHOP DATA </h1>
   </div>
+  <link rel ="stylesheet" type="text/css" href="style.css">
   <div class="container">
-    <div class="col" style="padding-top:50px;">
+    <div class="col" style="padding-top:0px;">
       <table id="view-data" class="table" width="100%" cellspacing="0">
         <thead>
           <tr>
