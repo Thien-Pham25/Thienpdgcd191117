@@ -17,7 +17,7 @@ $product_amount = $_POST['product-amount'];
 //echo ("Connect successfully!");
 }
 $query = "INSERT INTO product (product_name, product_price, product_amount) 
-VALUES('$product_name', '$product_price', '$atn_store', '$product_amount');";
+VALUES('$product_name', '$product_price','$product_amount');";
 $result = pg_query($connect, $query);
 if ($result) {
     echo "<script>alert('Record added succesfully!, Refresh');</script>";
