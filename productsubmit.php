@@ -13,11 +13,10 @@ if ($connect === false)
 } else {
 $product_name = $_POST['product-name'];
 $product_price = $_POST['product-price'];
-$atn_store = $_POST['atn-store'];
 $product_amount = $_POST['product-amount'];
 //echo ("Connect successfully!");
 }
-$query = "INSERT INTO product (product_name, product_price, atn_store, product_amount) 
+$query = "INSERT INTO product (product_name, product_price, product_amount) 
 VALUES('$product_name', '$product_price', '$atn_store', '$product_amount');";
 $result = pg_query($connect, $query);
 if ($result) {

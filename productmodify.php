@@ -7,7 +7,7 @@ user=iupvxhmesegzjq
 password=0d633c625519042f54ca84dc367630ba07f2028784c6a03108b94aa49376a7bb
 sslmode=require");
 
-$query = "select product_id, product_name, product_price, atn_store, product_amount from product ;";
+$query = "select product_id, product_name, product_price, product_amount from product ;";
 $result = pg_query($con, $query);
 $resultCheck = pg_num_rows($result);
 ?>
@@ -26,7 +26,7 @@ $resultCheck = pg_num_rows($result);
 
 <body id="bd-view-page">
   <div class="form-title">
-    <h1 style="font-weight: 700;">ATN BOSS - VIEW SHOP DATA </h1>
+    <h1 style="font-weight: 700;">VIEW SHOP DATA </h1>
   </div>
   <link rel ="stylesheet" type="text/css" href="style.css">
   <div class="container">
@@ -37,7 +37,6 @@ $resultCheck = pg_num_rows($result);
             <th>#</th>
             <th>Product</th>
             <th>Price</th>
-            <th>Store</th>
             <th>Amount</th>
             <th>Action</th>
           </tr>
@@ -55,11 +54,8 @@ $resultCheck = pg_num_rows($result);
                   <?php echo $row['product_name']; ?>
                 </td>
                 <td>
-                  <?php echo $row['product_price,']; ?>
-                </td>
-                <td>
-                  <?php echo $row['atn_store']; ?>
-                </td>
+                  <?php echo $row['product_price']; ?>
+                </td>                
                 <td>
                   <?php echo $row['product_amount']; ?>
                 </td>
