@@ -26,15 +26,14 @@ $resultCheck = pg_num_rows($result);
 
 <body id="bd-view-page">
   <div class="form-title">
-    <h1 style="font-weight: 700;">VIEW SHOP DATA </h1>
+    <h1 style="font-weight: 100; text-align: center">ATN BOSS - VIEW SHOP DATA </h1>
   </div>
-  <link rel ="stylesheet" type="text/css" href="style.css">
   <div class="container">
-    <div class="col" style="padding-top:0px;">
+    <div class="col" style="padding-top:50px;">
       <table id="view-data" class="table" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>Product</th>
             <th>Price</th>
             <th>Amount</th>
@@ -55,7 +54,7 @@ $resultCheck = pg_num_rows($result);
                 </td>
                 <td>
                   <?php echo $row['product_price']; ?>
-                </td>                
+                </td>
                 <td>
                   <?php echo $row['product_amount']; ?>
                 </td>
@@ -65,14 +64,15 @@ $resultCheck = pg_num_rows($result);
               </tr>
           <?php
             }
-          } else {
+          } else 
+          {
             echo "<script>alert('Connect fail!');</script>" . pg_errormessage($query);
           }
           ?>
         </tbody>
       </table>
       <a href="./logout.php">
-        <h3 id="sign-out"> LOG OUT </h3>
+        <h3 style="font-weight: 100; text-align: center" id="sign-out" > LOG OUT </h3>
       </a>
     </div>
 </body>

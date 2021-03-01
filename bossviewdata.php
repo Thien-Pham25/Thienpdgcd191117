@@ -34,7 +34,7 @@ $resultCheck = pg_num_rows($result);
       <table id="view-data" class="table" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>Product</th>
             <th>Price</th>
             <th>Amount</th>
