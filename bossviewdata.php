@@ -17,18 +17,17 @@ $resultCheck = pg_num_rows($result);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ATN Shop - Mofidy Product</title>
-
+  <title>ATN Shop - Product</title>
+  
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-  <link rel ="stylesheet" type="text/css" href="style.css">
+  
 </head>
 
 <body id="bd-view-page">
   <div class="form-title">
-    <h1 style="font-weight: 700;">ATN BOSS - VIEW SHOP DATA </h1>
+    <h1 style="font-weight: 100; text-align: center">ATN BOSS - VIEW SHOP DATA </h1>
   </div>
   <div class="container">
     <div class="col" style="padding-top:50px;">
@@ -38,7 +37,6 @@ $resultCheck = pg_num_rows($result);
             <th>#</th>
             <th>Product</th>
             <th>Price</th>
-            <th>Store</th>
             <th>Amount</th>
             <th>Action</th>
           </tr>
@@ -56,10 +54,7 @@ $resultCheck = pg_num_rows($result);
                   <?php echo $row['product_name']; ?>
                 </td>
                 <td>
-                  <?php echo $row['product_price,']; ?>
-                </td>
-                <td>
-                  <?php echo $row['atn_store']; ?>
+                  <?php echo $row['product_price']; ?>
                 </td>
                 <td>
                   <?php echo $row['product_amount']; ?>
@@ -70,14 +65,15 @@ $resultCheck = pg_num_rows($result);
               </tr>
           <?php
             }
-          } else {
+          } else 
+          {
             echo "<script>alert('Connect fail!');</script>" . pg_errormessage($query);
           }
           ?>
         </tbody>
       </table>
       <a href="./logout.php">
-        <h3 id="sign-out"> LOG OUT </h3>
+        <h3 id="sign-out text-align: center" > LOG OUT </h3>
       </a>
     </div>
 </body>
