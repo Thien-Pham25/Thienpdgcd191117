@@ -5,7 +5,7 @@ dbname=ddo3aus679kv6d
 port=5432
 user=iupvxhmesegzjq
 password=0d633c625519042f54ca84dc367630ba07f2028784c6a03108b94aa49376a7bb
-sslmode=require");
+sslmode=prefer");
 
     if ($account === false) 
     {
