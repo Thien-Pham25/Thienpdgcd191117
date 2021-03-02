@@ -29,3 +29,4 @@ sslmode=prefer");
         echo ("ERROR + $query") . pg_errormessage($query);
     }
     pg_close($connect);
+?>
