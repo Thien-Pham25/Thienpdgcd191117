@@ -12,9 +12,9 @@ sslmode=prefer");
     {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "DELETE FROM product WHERE product_id=1";
+    $pg_connect = "DELETE FROM product WHERE product_id=1";
 
-    if ($conn->query($sql) === TRUE) 
+    if ($conn->query($pg_connect) === TRUE) 
     {
         echo "Record deleted successfully";
     } 
