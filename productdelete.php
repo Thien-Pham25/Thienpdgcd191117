@@ -6,7 +6,7 @@
     $connection_string = "host=". $host . " port=5432 dbname=" . $dbname . " user=" . $user. " password=".$password;
     $dbServer = pg_connect($connection_string);
 
-    $product_id = $_GET['id'];
+    $product_id = $_GET['product_id'];
 
     $query = "DELETE FROM product WHERE product_id = $product_id";
     
