@@ -7,22 +7,25 @@ user=iupvxhmesegzjq
 password=0d633c625519042f54ca84dc367630ba07f2028784c6a03108b94aa49376a7bb
 sslmode=prefer");
 
-    if ($conn->connect_error) 
+    $connect = new mysqli($host, $dbname, $port, $user, $password, $sslmode);
+    if ($connect->connect_error) 
     {
-        die("ERROR: Could not connect to the database server!" . $conn->connect_error);
+        die("Connection failed: " . $conn->connect_error);
+        exit();
+    }
+    $sql = "DELETE FROM product WHERE product_id=1";
+ 
+    if ($conn->query($sql) === TRUE) 
+    {
+        echo "Record deleted successfully";
     } 
-
-//echo ("Connect successfully!");
-    $sql = "DELETE FROM product WHERE id=1";
-    if ($conn->query($sql) === TRUE) {
-        echo "Delete Complete";
-    } else {
-        echo "Delete Fall" . $conn->error;
+    else 
+    {
+        echo "Error deleting record: " . $conn->error;
     }
      
-    $conn->close();
+    $connect->close();
     ?>
 
 
- 
 
