@@ -7,7 +7,7 @@ user=iupvxhmesegzjq
 password=0d633c625519042f54ca84dc367630ba07f2028784c6a03108b94aa49376a7bb
 sslmode=prefer");
 
-$query = "select product_id, product_name, product_price, atn_store, product_amount from product ;";
+$query = "select product_id, product_name, product_price, product_amount from product ;";
 $result = pg_query($con, $query);
 $resultCheck = pg_num_rows($result);
 ?>
@@ -17,17 +17,16 @@ $resultCheck = pg_num_rows($result);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ATN Shop - Product</title>
-  
+  <title>ATN SHOP - BOSS VIEW ATN SHOP DATA</title>
+
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  
 </head>
 
 <body id="bd-view-page">
   <div class="form-title">
-    <h1 style="font-weight: 100; text-align: center">ATN BOSS - VIEW SHOP DATA </h1>
+    <h1 style="font-weight: 100; text-align: center">BOSS VIEW SHOP DATA </h1>
   </div>
   <div class="container">
     <div class="col" style="padding-top:50px;">
@@ -38,7 +37,6 @@ $resultCheck = pg_num_rows($result);
             <th>Product</th>
             <th>Price</th>
             <th>Amount</th>
-            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -59,9 +57,6 @@ $resultCheck = pg_num_rows($result);
                 <td>
                   <?php echo $row['product_amount']; ?>
                 </td>
-                <td>
-                  <div class="btn-group" data-toggle="buttons"><a href="/productdelete.php?id=$result[product_id]" class="btn btn-primary btn-sm">Delete</a></div>
-                </td>
               </tr>
           <?php
             }
@@ -77,5 +72,4 @@ $resultCheck = pg_num_rows($result);
       </a>
     </div>
 </body>
-
 </html>

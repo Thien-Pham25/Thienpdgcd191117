@@ -25,7 +25,7 @@ else
         {
             session_start();
             $_SESSION["username"] = $username;
-            header('Location: /bossviewdata.php');
+            header('url=bossviewdata.php');
         } 
         else 
         {

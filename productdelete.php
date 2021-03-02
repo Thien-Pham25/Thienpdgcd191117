@@ -6,22 +6,12 @@
     $connection_string = "host=". $host . " port=5432 dbname=" . $dbname . " user=" . $user. " password=".$password;
     $dbServer = pg_connect($connection_string);
 
-    $product_id = $_GET['product_id'];
+    $id = 1;
 
-    $query = "DELETE FROM product WHERE product_id = $product_id";
+    $query = "DELETE FROM product WHERE product_id = " . $id;
     
     $result = pg_query($dbServer, $query);
-    
-    if ($data) 
-    {
-        echo "<script>alert('Edited succesfully!, Refresh');</script>";
-        header('refresh: 3; url=productform.php');
-    } 
-    else 
-    {
-        echo ("ERROR + $query") . pg_errormessage($query);
-    }
-
+     
     pg_close($dbServer)
     ?>
 
