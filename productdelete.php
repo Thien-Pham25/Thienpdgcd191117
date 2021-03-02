@@ -7,26 +7,22 @@ user=iupvxhmesegzjq
 password=0d633c625519042f54ca84dc367630ba07f2028784c6a03108b94aa49376a7bb
 sslmode=prefer");
 
-    if ($connect === false) 
+    if ($conn->connect_error) 
     {
-        die("ERROR: Could not connect to the database server!");
+        die("ERROR: Could not connect to the database server!" . $conn->connect_error);
     } 
-    else 
-    {
-  //echo ("Connect successfully!");
-        $product_id = $_GET['id'];
-    }
+
 //echo ("Connect successfully!");
-        $query = "DELETE FROM product WHERE PRODUCTID='$product_id'";
-        $data = pg_query($connect, $query);
-    if ($data) 
-    {
-        echo "<script>alert('Edited succesfully!, Refresh');</script>";
-        header('refresh: 3; url=productform.php');
-    } 
-    else 
-    {
-        echo ("ERROR + $query") . pg_errormessage($query);
+    $sql = "DELETE FROM product WHERE id=1";
+    if ($conn->query($sql) === TRUE) {
+        echo "Delete Complete";
+    } else {
+        echo "Delete Fall" . $conn->error;
     }
-    pg_close($connect);
-?>
+     
+    $conn->close();
+    ?>
+
+
+ 
+
