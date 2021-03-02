@@ -26,7 +26,7 @@ $resultCheck = pg_num_rows($result);
 
 <body id="bd-view-page">
   <div class="form-title">
-    <h1 style="font-weight: 100; text-align: center">SHOP DATA </h1>
+    <h1 style="font-weight: 100; text-align: center">VIEW SHOP DATA </h1>
   </div>
   <div class="container">
     <div class="col" style="padding-top:50px;">
