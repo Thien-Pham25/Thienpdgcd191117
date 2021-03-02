@@ -11,7 +11,7 @@ sslmode=prefer");
     if ($connect->connect_error) 
     {
         die("Connection failed: " . $conn->connect_error);
-        exit();
+        
     }
     $sql = "DELETE FROM product WHERE product_id=1";
  
