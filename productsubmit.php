@@ -13,18 +13,18 @@ sslmode=prefer");
     } 
   else 
     {
-      //echo ("Connect successfully!");
+      echo ("Connect successfully!");
       $product_name = $_POST['product-name'];
       $product_price = $_POST['product-price'];
       $product_amount = $_POST['product-amount'];
     }
-      //echo ("Connect successfully!");
+      echo ("Connect successfully!");
       $query = "INSERT INTO product (product_name, product_price, product_amount) 
       VALUES('$product_name', '$product_price', '$product_amount');";
       $result = pg_query($connect, $query);
     if ($result) 
     {
-      echo "<script>alert('Record added succesfully!, Refresh');</script>";
+      echo "<script>alert('Product Added Succesfully To Shop Data!!!');</script>";
       header('refresh: 3; url=productform.php');
     } 
     else 
@@ -32,4 +32,4 @@ sslmode=prefer");
       echo ("ERROR + $query") . pg_errormessage($query);
     }
     pg_close($connect);
-?>
+    ?>
